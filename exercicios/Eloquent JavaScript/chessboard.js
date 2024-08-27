@@ -1,22 +1,37 @@
-/* chama um prompt para que o usuario escolha 2 numeros inteiros positivos para definir o grid
- invoca o loop 1 para montar o grid recursivamente
+/* 
+chama um prompt para que o usuario escolha 2 numeros inteiros positivos para definir o grid
+invocando um loop que invoca outro loop para montar o grid recursivamente.
+*/
 
- loop1 - recebe os 2 valores e inicia o loop de impressão
-     loop2 */
+// const tamanho = 8; usado na primeira etapa do código
 
-const tamanho = 8;
+
+/*  Aqui eu tentei perguntar ao usuário qual o tamanho do tabuleiro */
+const readline = require('node:readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
 let grid = "";
 
-for (let linha = 0; linha < tamanho; linha++){
-    for (let coluna = 0; coluna < tamanho; coluna++) {
-        if ((linha + coluna) % 2 == 0) {
-            grid += " ";
-        } else {
-            grid += "#";
+rl.question(`\nQual é o tamanho do tabuleiro?\n`, numero => {
+    let tamanho = parseInt(numero);
+    for (let linha = 0; linha < tamanho; linha++){
+        for (let coluna = 0; coluna < tamanho; coluna++) {
+            if ((linha + coluna) % 2 == 0) {
+                grid += " ";
+            } else {
+                grid += "#";
+            };
         };
+        grid += "\n";
     };
-    grid += "\n";
-};
+    
+    console.log(grid);
+    rl.close();
+});
 
-console.log(grid);
+
+
