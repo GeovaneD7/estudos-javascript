@@ -1,12 +1,9 @@
 /* 
 chama um prompt para que o usuario escolha 2 numeros inteiros positivos para definir o grid
 invocando um loop que invoca outro loop para montar o grid recursivamente.
-*/
+const tamanho = 8; usado na primeira etapa do código */
 
-// const tamanho = 8; usado na primeira etapa do código
-
-
-/*  Aqui eu tentei perguntar ao usuário qual o tamanho do tabuleiro */
+// Aqui eu tentei perguntar ao usuário qual o tamanho do tabuleiro 
 const readline = require('node:readline');
 
 const rl = readline.createInterface({
