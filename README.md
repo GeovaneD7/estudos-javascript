@@ -16,3 +16,5 @@ Esta pasta contém todos os códigos que eu mesmo escrevi enquanto faço algum e
 ## RPG
 
 Aqui são scripts que eu criei com o único intuito de fazer rolagens simples e eficazes para quando eu for jogar algum rpg de mesa.
+
+teste
